@@ -4,7 +4,7 @@
   "description": "",
   "main": "createRandomTC.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch --verbose=false"
   },
   "repository": {
     "type": "git",
