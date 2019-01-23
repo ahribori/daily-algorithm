@@ -2,7 +2,34 @@ const {
   createArrayOfRandomNumbers,
 } = require('../../../helpers/test-case-helper');
 
-const { solution1, solution2 } = require('./OddOccurrencesInArray');
+/**
+ * Set으로 중복제거 한 뒤 다음 마지막 남은 하나를 리턴
+ */
+const solution1 = N => {
+  const set = new Set();
+
+  for (let i = 0, len = N.length; i < len; i++) {
+    const number = N[i];
+    if (!set.has(number)) {
+      set.add(number);
+    } else {
+      set.delete(number);
+    }
+  }
+
+  let result;
+  for (let key of set.keys()) {
+    result = key;
+  }
+  return result;
+};
+
+/**
+ * XOR 연산을 누산해서 마지막 남은 숫자를 리턴
+ */
+const solution2 = N => {
+  return N.reduce((prev, current) => prev ^ current);
+};
 
 test('s1_tc1', () => {
   expect(solution1([9, 3, 9, 3, 9, 7, 9])).toBe(7);
