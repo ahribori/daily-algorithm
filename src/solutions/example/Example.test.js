@@ -1,8 +1,3 @@
-/**
- * Matcher References
- *
- * https://jestjs.io/docs/en/using-matchers
- */
 const solution = N => {
   return N;
 };
