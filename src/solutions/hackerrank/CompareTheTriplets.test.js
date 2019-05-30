@@ -1,15 +1,15 @@
 const solution = (a, b) => {
-  const result = [0, 0];
+  const points = [0, 0];
 
   for (let i = 0; i < 3; i++) {
     if (a[i] > b[i]) {
-      result[0]++;
+      points[0]++;
     } else if (a[i] < b[i]) {
-      result[1]++;
+      points[1]++;
     }
   }
 
-  return result;
+  return points;
 };
 
 test('solution', () => {
