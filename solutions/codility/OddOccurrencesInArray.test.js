@@ -1,6 +1,6 @@
 const {
   createArrayOfRandomNumbers,
-} = require('../../../helpers/test-case-helper');
+} = require('../../helpers/test-case-helper');
 
 /**
  * Set으로 중복제거 한 뒤 다음 마지막 남은 하나를 리턴
