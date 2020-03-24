@@ -1,18 +1,20 @@
 function isValid(s) {
   if (s === '') return true;
-  const map = {
+
+  const braceMap = {
     '(': ')',
     '{': '}',
     '[': ']',
   };
+
   const stack = [];
   for (let i = 0; i < s.length; i++) {
     const char = s[i];
-    if (map[char]) {
+    if (braceMap[char]) {
       stack.push(char);
     } else {
       const open = stack.pop();
-      if (!map[open] || char !== map[open]) {
+      if (!braceMap[open] || char !== braceMap[open]) {
         return false;
       }
     }
