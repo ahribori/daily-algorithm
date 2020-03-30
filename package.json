@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/ahribori/daily-algorithm#readme",
   "devDependencies": {
-    "@types/jest": "^24.0.13",
-    "jest": "^24.8.0",
-    "prettier": "^1.17.1"
+    "@types/jest": "^25.1.4",
+    "jest": "^25.2.4",
+    "prettier": "^2.0.2"
   },
   "dependencies": {}
 }
