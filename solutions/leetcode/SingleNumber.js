@@ -14,5 +14,11 @@ function singleNumber(nums) {
   }
 }
 
-singleNumber([2, 2, 1]);
-singleNumber([4, 1, 2, 1, 2]);
+function singleNumber2(nums) {
+  return nums.reduce((acc, curr) => {
+    return acc ^ curr;
+  });
+}
+
+singleNumber2([2, 2, 1]);
+singleNumber2([4, 1, 2, 1, 2]);
