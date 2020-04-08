@@ -12,10 +12,9 @@ function reverseList(head) {
     const node = new ListNode(head.val);
     if (tail) {
       node.next = tail;
-      tail = node;
-    } else {
-      tail = node;
     }
+    tail = node;
+
     if (!head.next) {
       break;
     }
