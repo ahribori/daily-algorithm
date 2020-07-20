@@ -4,7 +4,7 @@
  * @return {number}
  */
 const xorOperation = function(n, start) {
-  const nums = Array.from(new Array(n)).map((_, index) => start + 2 * index);
+  const nums = [...Array(n)].map((_, index) => start + 2 * index);
   return nums.reduce((prev, curr) => prev ^ curr);
 };
 
