@@ -10,16 +10,12 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-const invertTree = function(root) {
-  function invert(node) {
-    if (!node) return null;
+function invertTree(root) {
+  if (root) {
     let temp;
-    temp = node.right;
-    node.right = node.left;
-    node.left = temp;
-    if (node.right) invert(node.right);
-    if (node.left) invert(node.left);
-    return node;
+    temp = root.right;
+    root.right = invertTree(root.left);
+    root.left = invertTree(temp);
   }
-  return invert(root);
-};
+  return root;
+}
